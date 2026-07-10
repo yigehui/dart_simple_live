@@ -36,12 +36,10 @@ mixin PlayerMixin {
         ? const VideoControllerConfiguration(
             vo: 'mediacodec_embed',
             hwdec: 'mediacodec',
-            androidAttachSurfaceAfterVideoParameters: false,
           )
         : VideoControllerConfiguration(
             enableHardwareAcceleration:
                 AppSettingsController.instance.hardwareDecode.value,
-            androidAttachSurfaceAfterVideoParameters: false,
           ),
   );
 }
